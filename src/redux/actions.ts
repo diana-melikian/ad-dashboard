@@ -1,6 +1,6 @@
 import { Action, action } from 'easy-peasy'
-import { AdsState } from './types'
+import { Ad, AdsState } from './types'
 
-export const setAds: Action<AdsState, []> = action((state, payload) => {
+export const setAds: Action<AdsState, Ad[]> = action((state, payload) => {
   state.ads = payload
 })

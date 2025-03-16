@@ -1,21 +1,22 @@
-import { StoreModel } from '@/redux/types'
-import { Actions, useStoreActions } from 'easy-peasy'
-import { useEffect } from 'react'
+import { Ad } from '../redux/types'
+import { useEffect, useState } from 'react'
+import fetch from 'cross-fetch'
 
-export default function useFetchAds(): void {
-  const setAds = useStoreActions(
-    (actions: Actions<StoreModel>) => actions.adsState.setAds
-  )
+export default function useFetchAds(url: string): Ad[] {
+  const [data, setData] = useState<Ad[]>([])
 
   useEffect(() => {
-    async function fetchAndSetAds(): Promise<void> {
-      const response = await fetch(
-        'https://my-json-server.typicode.com/akramsaouri/ad-performance/ads'
-      )
-      const data = await response.json()
-      setAds(data)
+    async function fetchAds(): Promise<void> {
+      try {
+        const response = await fetch(url)
+        const responseData = await response.json()
+        setData(responseData)
+      } catch (error) {
+        console.error('An error occurred: ', error)
+      }
     }
 
-    fetchAndSetAds()
+    fetchAds()
   }, [])
+  return data
 }

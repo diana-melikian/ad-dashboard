@@ -16,14 +16,10 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    },
-    "types": ["vitest/globals", "@testing-library/jest-dom"]
+    "types": ["@testing-library/jest-dom"]
   },
   "include": [
     "./src",
-    "./@types",
     "./mocks",
     "scripts",
     "./**.js",

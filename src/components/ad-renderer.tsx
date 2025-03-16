@@ -1,4 +1,4 @@
-import { Ad, AdType } from '@/redux/types'
+import { Ad, AdType } from '../redux/types'
 import { ReactElement } from 'react'
 
 export interface AdAttributeProps {
@@ -16,7 +16,7 @@ function AdAttribute(props: AdAttributeProps): ReactElement {
   )
 }
 
-// TODO: image to occupy full width and be cut in height
+// TODO: image to occupy full width and be cut in height if needed
 // TODO: improve grid
 
 export function AdRenderer(props: Ad): ReactElement {

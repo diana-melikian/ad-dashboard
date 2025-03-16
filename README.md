@@ -7,14 +7,14 @@
 Created with [create-react-app-vite](https://github.com/laststance/create-react-app-vite) - a Vite template on top of the official [Vite](https://vitejs.dev/) [react-ts](https://stackblitz.com/edit/vitejs-vite-is3dmk?file=index.html&terminal=dev) template(`npm init vite@latest myapp -- --template react-ts`) and some extended setup.
 
 - [eslint-config-ts-prefixer](https://github.com/laststance/eslint-config-ts-prefixer).
-- [Vitest](https://vitest.dev/), [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/), [MSW](https://mswjs.io/)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/), [MSW](https://mswjs.io/)
 - [tailwindcss](https://tailwindcss.com/)
 - [Github Actions](https://github.com/features/actions)
 
-### pnpm
+### Installation
 
 ```sh
-cd myapp
+cd ad-dashboard
 pnpm install
 pnpm start
 ```
@@ -24,8 +24,8 @@ pnpm start
 ```sh
 pnpm dev             # start development server
 pnpm start           # start development server
-pnpm validate        # run test,lint,build,typecheck concurrently
 pnpm test            # run jest
+pnpm validate        # run test,lint,build,typecheck concurrently
 pnpm lint            # run eslint
 pnpm lint:fix        # run eslint with --fix option
 pnpm typecheck       # run TypeScript compiler check

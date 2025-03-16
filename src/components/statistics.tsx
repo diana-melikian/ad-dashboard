@@ -1,4 +1,4 @@
-import { StoreModel } from '@/redux/types'
+import { StoreModel } from '../redux/types'
 import { State, useStoreState } from 'easy-peasy'
 import { ReactElement, Suspense } from 'react'
 
