@@ -28,7 +28,8 @@
     "scripts",
     "./**.js",
     "./**.ts",
-    "eslint.config.mjs"
+    "eslint.config.mjs",
+    "vite.config.mts"
   ],
   "exclude": ["dist"]
 }
