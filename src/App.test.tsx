@@ -7,7 +7,7 @@ import App from './App'
 test('Work App Component without error', () => {
   render(<App />)
 
-  expect(screen.getByText("I'm REACT_APP_TEXT from .env")).toBeInTheDocument()
+  expect(screen.getByText('Ad Performance Dashboard')).toBeInTheDocument()
 })
 
 test('Working Counter', async () => {
@@ -25,16 +25,4 @@ test('Working Counter', async () => {
 
   await user.click(button)
   expect(getByText('count is: 3')).toBeInTheDocument()
-})
-
-test('working with msw', async () => {
-  render(<App />)
-
-  await waitFor(
-    () => {
-      expect(screen.getByText('MSW')).toBeInTheDocument()
-      expect(screen.getByText('Tailwind CSS')).toBeInTheDocument()
-    },
-    { timeout: 5000 },
-  )
 })

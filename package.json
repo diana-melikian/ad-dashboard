@@ -1,6 +1,6 @@
 {
-  "name": "create-react-app-vite",
-  "version": "0.4.0",
+  "name": "ad-dashboard",
+  "version": "0.1.0",
   "license": "MIT",
   "msw": {
     "workerDirectory": "public"
@@ -40,6 +40,7 @@
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/postcss": "^4.0.14",
     "@tailwindcss/typography": "^0.5.16",
+    "@tailwindcss/vite": "^4.0.14",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",

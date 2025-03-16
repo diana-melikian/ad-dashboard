@@ -7,17 +7,17 @@ import EnvironmentPlugin from 'vite-plugin-environment'
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
-    sourcemap: true,
+    sourcemap: true
   },
-  plugins: [react(), EnvironmentPlugin(['REACT_APP_TEXT'])],
+  plugins: [react(), tailwindcss()],
   publicDir: 'public',
   server: {
     host: true,
-    port: 3000,
+    port: 3000
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
-  },
+      '@': path.resolve(__dirname, './src')
+    }
+  }
 })

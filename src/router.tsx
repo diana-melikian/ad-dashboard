@@ -1,25 +1,11 @@
 import { createBrowserRouter } from 'react-router'
 
-import Layout from './components/Layout/Layout'
-import Index from './pages/Index'
-import Notfound from './pages/Notfound'
+import Index from './components'
 
 const router = createBrowserRouter([
   {
-    path: '/',
-    element: (
-      <Layout>
-        <Index />
-      </Layout>
-    ),
-  },
-  {
     path: '*',
-    element: (
-      <Layout>
-        <Notfound />
-      </Layout>
-    ),
+    element: <Index />,
   },
 ])
 
