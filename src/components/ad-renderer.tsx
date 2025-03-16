@@ -1,21 +1,5 @@
+import { Ad, AdType } from '@/redux/types'
 import { ReactElement } from 'react'
-
-export enum AdType {
-  IMAGE = 'image',
-  TEXT = 'text',
-  VIDEO = 'video',
-}
-
-export interface AdRendererProps {
-  key: string
-  type: AdType
-  impressions: number
-  clicks: number
-  ctr: number
-  headline?: string
-  description?: string
-  url?: string
-}
 
 export interface AdAttributeProps {
   attributeTitle: string
@@ -35,7 +19,7 @@ function AdAttribute(props: AdAttributeProps): ReactElement {
 // TODO: image to occupy full width and be cut in height
 // TODO: improve grid
 
-export function AdRenderer(props: AdRendererProps): ReactElement {
+export function AdRenderer(props: Ad): ReactElement {
   const { type, impressions, clicks, ctr, headline, description, url } = props
 
   const AdCover = (): ReactElement => {
@@ -69,7 +53,7 @@ export function AdRenderer(props: AdRendererProps): ReactElement {
   }
 
   return (
-    <div className="p-2 m-2 w-xs shadow-md">
+    <div className="p-2 m-2 w-3xs sm:w-2xs md:w-xs xl:w-sm shadow-md">
       <div className="h-50">
         <AdCover />
       </div>
@@ -77,11 +61,11 @@ export function AdRenderer(props: AdRendererProps): ReactElement {
       <div className="flex flex-row">
         <AdAttribute
           attributeTitle={'Impressions'}
-          attributeValue={impressions.toString()}
+          attributeValue={impressions.toLocaleString('no')}
         />
         <AdAttribute
           attributeTitle={'Clicks'}
-          attributeValue={clicks.toString()}
+          attributeValue={clicks.toLocaleString('no')}
         />
         <AdAttribute
           attributeTitle={'CTR'}
